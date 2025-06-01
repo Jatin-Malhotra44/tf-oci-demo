@@ -4,3 +4,5 @@ variable "fingerprint" {}
 variable "private_key_path" {}
 variable "region" {}
 variable "compartment_ocid" {}
+variable "display_name" {}
+variable "cidr_block" {}

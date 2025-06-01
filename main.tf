@@ -2,8 +2,9 @@ provider "oci" {
   config_file_profile = "DEFAULT"
 }
 
-resource "oci_core_vcn" "example_vcn3" {
-  cidr_block     = "10.2.0.0/16"
-  compartment_id = var.compartment_ocid
-  display_name   = "example-vcn3"
+module "network" {
+  source     = "./modules/network"
+  cidr_block = var.cidr_block
+  compartment_ocid = var.compartment_ocid
+  display_name = var.display_name
 }
